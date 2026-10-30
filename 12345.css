@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #090e1a;
+    color: #f1f5f9;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    padding: 35px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+header h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: #61dafb;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #8290a8;
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto 35px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 16px 20px;
+    background: #141d2e;
+    color: white;
+    border: 1px solid #263650;
+    border-radius: 14px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: #38bdf8;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    direction: ltr;
+    padding: 10px 0;
+}
+
+.periodic-table {
+    direction: ltr;
+    display: grid;
+    grid-template-columns: repeat(18, 65px);
+    grid-template-rows: repeat(9, 85px);
+    gap: 7px;
+    width: max-content;
+    margin: auto;
+}
+
+.element {
+    width: 65px;
+    height: 85px;
+    border-radius: 12px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.25s;
+    border: 2px solid transparent;
+    color: white;
+}
+
+.element:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.2);
+}
+
+.element.active {
+    border-color: white;
+    box-shadow: 0 0 18px #38bdf866;
+}
+
+.number {
+    font-size: 10px;
+    align-self: flex-start;
+}
+
+.symbol {
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.name {
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.element-info {
+    max-width: 850px;
+    margin: 45px auto;
+    padding: 30px;
+    background: #141d2e;
+    border: 1px solid #263650;
+    border-radius: 20px;
+    line-height: 2.5;
+}
+
+.element-info h2 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.element-info p {
+    color: #cbd5e1;
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    .periodic-table {
+        margin: 0;
+    }
+}
